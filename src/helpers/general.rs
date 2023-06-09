@@ -8,14 +8,18 @@ use std::fs;
 const CODE_TEMPLATE_PATH: &str =
     "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/src/code_template.rs";
 
-const EXEC_MAIN_PATH: &str = "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/src/main.rs";
+pub const WEB_SERVER_PROJECT_PATH: &str =
+    "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/";
+
+pub const EXEC_MAIN_PATH: &str =
+    "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/src/main.rs";
 
 const API_SCHEMA_PATH: &str =
     "/Users/shaun/Code/TUTORIALS/rust_autogpt/auto_gippity/schemas/api_schema.json";
 
 // Extend ai function to encourage specific output
 pub fn extend_ai_function(ai_func: fn(&str) -> &'static str, func_input: &str) -> Message {
-    let ai_function_str = ai_func(func_input);
+    let ai_function_str: &str = ai_func(func_input);
 
     // Extend the string to encourage only printing the output
     let msg: String = format!(
@@ -82,6 +86,12 @@ pub async fn check_status_code(client: &Client, url: &str) -> Result<u16, reqwes
 // Get Code Template
 pub fn read_code_template_contents() -> String {
     let path: String = String::from(CODE_TEMPLATE_PATH);
+    fs::read_to_string(path).expect("Failed to read code template")
+}
+
+// Get Exec Main
+pub fn read_exec_main_contents() -> String {
+    let path: String = String::from(EXEC_MAIN_PATH);
     fs::read_to_string(path).expect("Failed to read code template")
 }
 

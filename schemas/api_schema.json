@@ -1,0 +1,81 @@
+[
+  {
+    "route": "/task",
+    "is_route_dynamic": "false",
+    "method": "post",
+    "request_body": {
+      "id": "number",
+      "name": "string",
+      "completed": "bool",
+      "timezone": "string"
+    },
+    "response": "None"
+  },
+  {
+    "route": "/task",
+    "is_route_dynamic": "false",
+    "method": "get",
+    "request_body": "None",
+    "response": [
+      {
+        "id": "number",
+        "name": "string",
+        "completed": "bool",
+        "timezone": "string"
+      }
+    ]
+  },
+  {
+    "route": "/task",
+    "is_route_dynamic": "false",
+    "method": "put",
+    "request_body": {
+      "id": "number",
+      "name": "string",
+      "completed": "bool",
+      "timezone": "string"
+    },
+    "response": "None"
+  },
+  {
+    "route": "/task/{id}",
+    "is_route_dynamic": "true",
+    "method": "get",
+    "request_body": "None",
+    "response": {
+      "id": "number",
+      "name": "string",
+      "completed": "bool",
+      "timezone": "string"
+    }
+  },
+  {
+    "route": "/task/{id}",
+    "is_route_dynamic": "true",
+    "method": "delete",
+    "request_body": "None",
+    "response": "None"
+  },
+  {
+    "route": "/register",
+    "is_route_dynamic": "false",
+    "method": "post",
+    "request_body": {
+      "id": "number",
+      "username": "string",
+      "password": "string"
+    },
+    "response": "None"
+  },
+  {
+    "route": "/login",
+    "is_route_dynamic": "false",
+    "method": "post",
+    "request_body": {
+      "id": "number",
+      "username": "string",
+      "password": "string"
+    },
+    "response": "string"
+  }
+]
