@@ -13,9 +13,7 @@ use crate::models::agent_basic::basic_agent::{AgentState, BasicAgent};
 use crate::models::agents::agent_traits::{FactSheet, RouteObject, SpecialFunctions};
 
 use async_trait::async_trait;
-use crossterm::style::Print;
 use reqwest::Client;
-use std::fs;
 use std::process::{Command, Stdio};
 use std::time::Duration;
 use tokio::time;

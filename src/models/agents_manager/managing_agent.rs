@@ -8,7 +8,7 @@ use crate::models::agents::agent_backend::AgentBackendDeveloper;
 
 #[derive(Debug)]
 pub struct ManagingAgent {
-    attributes: BasicAgent,
+    _attributes: BasicAgent,
     factsheet: FactSheet,
     agents: Vec<Box<dyn SpecialFunctions>>,
 }
@@ -44,7 +44,7 @@ impl ManagingAgent {
         };
 
         Ok(Self {
-            attributes,
+            _attributes: attributes,
             factsheet,
             agents,
         })
@@ -63,7 +63,7 @@ impl ManagingAgent {
         self.create_agents();
 
         for agent in &mut self.agents {
-            let agent_res: Result<(), Box<dyn std::error::Error>> =
+            let _agent_res: Result<(), Box<dyn std::error::Error>> =
                 agent.execute(&mut self.factsheet).await;
 
             // let agent_info: &BasicAgent = agent.get_attributes_from_agent();
