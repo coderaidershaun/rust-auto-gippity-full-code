@@ -8,8 +8,7 @@ use std::fs;
 const CODE_TEMPLATE_PATH: &str =
     "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/src/code_template.rs";
 
-pub const WEB_SERVER_PROJECT_PATH: &str =
-    "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/";
+pub const WEB_SERVER_PROJECT_PATH: &str = "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/";
 
 pub const EXEC_MAIN_PATH: &str =
     "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/src/main.rs";

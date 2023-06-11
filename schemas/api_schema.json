@@ -1,81 +1,32 @@
 [
   {
-    "route": "/task",
+    "route": "/start",
     "is_route_dynamic": "false",
     "method": "post",
     "request_body": {
-      "id": "number",
-      "name": "string",
-      "completed": "bool",
-      "timezone": "string"
+      "word": "string"
     },
-    "response": "None"
-  },
-  {
-    "route": "/task",
-    "is_route_dynamic": "false",
-    "method": "get",
-    "request_body": "None",
-    "response": [
-      {
-        "id": "number",
-        "name": "string",
-        "completed": "bool",
-        "timezone": "string"
-      }
-    ]
-  },
-  {
-    "route": "/task",
-    "is_route_dynamic": "false",
-    "method": "put",
-    "request_body": {
-      "id": "number",
-      "name": "string",
-      "completed": "bool",
-      "timezone": "string"
-    },
-    "response": "None"
-  },
-  {
-    "route": "/task/{id}",
-    "is_route_dynamic": "true",
-    "method": "get",
-    "request_body": "None",
     "response": {
       "id": "number",
-      "name": "string",
-      "completed": "bool",
-      "timezone": "string"
+      "word": "string",
+      "guessed_letters": "array",
+      "incorrect_attempts": "number",
+      "last_move": "string"
     }
   },
   {
-    "route": "/task/{id}",
+    "route": "/move/{id}",
     "is_route_dynamic": "true",
-    "method": "delete",
-    "request_body": "None",
-    "response": "None"
-  },
-  {
-    "route": "/register",
-    "is_route_dynamic": "false",
     "method": "post",
     "request_body": {
-      "id": "number",
-      "username": "string",
-      "password": "string"
+      "letter": "char"
     },
-    "response": "None"
-  },
-  {
-    "route": "/login",
-    "is_route_dynamic": "false",
-    "method": "post",
-    "request_body": {
+    "response": {
       "id": "number",
-      "username": "string",
-      "password": "string"
-    },
-    "response": "string"
+      "word": "string",
+      "guessed_letters": "array",
+      "incorrect_attempts": "number",
+      "last_move": "string"
+    }
   }
 ]

@@ -61,7 +61,6 @@ pub fn get_user_response(question: &str) -> String {
 pub fn confirm_safe_code() -> bool {
     let mut stdout: std::io::Stdout = stdout();
     loop {
-
         // Print the question in specified color
         stdout.execute(SetForegroundColor(Color::Blue)).unwrap();
         println!("");
