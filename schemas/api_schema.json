@@ -1,32 +1,26 @@
 [
   {
-    "route": "/start",
-    "is_route_dynamic": "false",
-    "method": "post",
-    "request_body": {
-      "word": "string"
-    },
+    "route": "/weather/{date}",
+    "is_route_dynamic": "true",
+    "method": "get",
+    "request_body": "None",
     "response": {
-      "id": "number",
-      "word": "string",
-      "guessed_letters": "array",
-      "incorrect_attempts": "number",
-      "last_move": "string"
+      "date": "string",
+      "temperature": "number",
+      "description": "string"
     }
   },
   {
-    "route": "/move/{id}",
-    "is_route_dynamic": "true",
-    "method": "post",
-    "request_body": {
-      "letter": "char"
-    },
-    "response": {
-      "id": "number",
-      "word": "string",
-      "guessed_letters": "array",
-      "incorrect_attempts": "number",
-      "last_move": "string"
-    }
+    "route": "/weather",
+    "is_route_dynamic": "false",
+    "method": "get",
+    "request_body": "None",
+    "response": [
+      {
+        "date": "string",
+        "temperature": "number",
+        "description": "string"
+      }
+    ]
   }
 ]
